@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Project Details</title>
+    <title>Achievements</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -37,28 +37,90 @@
             color: #e74c3c !important;
         }
 
+.btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease-in-out;
+            display: inline-block;
+        }
+
         .container {
             margin-top: 40px;
         }
 
-        .btn-back {
-            margin-bottom: 20px;
-            background-color: #e74c3c;
-            border: none;
-            transition: background-color 0.3s ease;
+        .cert-section {
+            margin-bottom: 40px;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .btn-back:hover {
+        .cert-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cert-section img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .cert-section:hover img {
+            transform: scale(1.05);
+        }
+
+        .cert-overlay {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            transition: bottom 0.5s ease;
+            text-align: center;
+        }
+
+        .cert-section:hover .cert-overlay {
+            bottom: 50%;
+        }
+
+        .cert-overlay h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cert-overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .cert-overlay a {
+            display: inline-block;
+            background-color: #e74c3c;
+            border: none;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cert-overlay a:hover {
             background-color: #c0392b;
         }
-.footer-content {
-            text-align: center;
-            padding: 20px;
-            background: #343a40;
-            color: white;
-            margin-top: 40px;
-        }
-footer {
+
+        footer {
             background-color: #343a40;
             color: white;
             text-align: center;
@@ -98,24 +160,24 @@ footer {
         }
 
         @media (max-width: 768px) {
-            .project-overlay {
+            .cert-overlay {
                 padding: 10px;
             }
 
-            .project-overlay h3 {
+            .cert-overlay h3 {
                 font-size: 1.5rem;
             }
 
-            .project-overlay p {
+            .cert-overlay p {
                 font-size: 1rem;
             }
         }
     </style>
-
+</head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand logo" href="index.html">WebSolutions</a>
+            <a class="navbar-brand logo" href="index.html">WebSolutions</a> <a href="projects.html" class="btn">My Projects</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -142,6 +204,131 @@ footer {
                 </ul>
             </div>
         </nav>
-        <h1> Under development</h1>
     </header>
+
+    <div class="container">
+        <h1 class="text-center">Achievements</h1>
+
+        <h2 class="text-center mt-5">Certifications</h2>
+        <div class="row">
+            <!-- Certifications -->
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert1.pdf" download>
+                        <img src="cert1.png" alt="Certification 1">
+                    </a>
+                    <div class="cert-overlay">
+                        <h6>Computational Thinking Through Robokar Workshop</h6>
+                        <p>26th January 2021</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert2.pdf" download>
+                        <img src="cert2.png" alt="Certification 2">
+                    </a>
+                    <div class="cert-overlay">
+                        <h5>Sangfor Cyber Guardian Firewall</h5>
+                        <p>13 - 15 December 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert3.pdf" download>
+                        <img src="cert3.png" alt="Certification 3">
+                    </a>
+                    <div class="cert-overlay">
+                        <h5>Cisco Network Security</h5>
+                        <p>4th August 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert4.pdf" download>
+                        <img src="cert4.png" alt="Certification 4">
+                    </a>
+                    <div class="cert-overlay">
+                        <h6>Cisco IoT Fundamentals: Connecting Things</h6>
+                        <p>2nd August 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert5.pdf" download>
+                        <img src="cert5.png" alt="Certification 5">
+                    </a>
+                    <div class="cert-overlay">
+                        <h5>Cisco Internetworking Technology</h5>
+                        <p>10th April 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="cert6.pdf" download>
+                        <img src="cert6.png" alt="Certification 6">
+                    </a>
+                    <div class="cert-overlay">
+                        <h6>Cisco CCNAV7 Switching Routing and Wireless Essentials</h6>
+                        <p>13th November 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-center mt-5">Educational Certification</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="hackthebox.pdf" download>
+                        <img src="hackthebox.png" alt="Educational Certification">
+                    </a>
+                    <div class="cert-overlay">
+                        <h6>Hack the Box</h6>
+                        <p>9th July 2024</p>
+                    </div>
+                </div>
+            </div>
+               <div class="col-md-4">
+                <div class="cert-section" data-aos="fade-up">
+                    <a href="am.pdf" download>
+                        <img src="ama.png" alt="Educational Certification">
+                    </a>
+                    <div class="cert-overlay">
+                        <h6>Amircan Diploma</h6>
+                        <p>2th May 2019</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Seifeldin Taha Abdelrahim Taha. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="mailto:shashameme527@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/lectures2?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/saif-eldin-3162b2257" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="back-to-top" onclick="scrollToTop()">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
 </body>
+</html>
